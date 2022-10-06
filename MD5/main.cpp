@@ -82,9 +82,9 @@ public:
 
 		std::stringstream hexdigest;
 		hexdigest << std::setfill('0') << std::setw(8) << std::right << std::hex <<
-			reverseByteOrder(m_context.a) << 
-			reverseByteOrder(m_context.b) << 
-			reverseByteOrder(m_context.c) << 
+			reverseByteOrder(m_context.a) <<
+			reverseByteOrder(m_context.b) <<
+			reverseByteOrder(m_context.c) <<
 			reverseByteOrder(m_context.d);
 
 		return hexdigest.str();
@@ -234,9 +234,9 @@ private:
 
 	/* RFC 1321 - 3.4 Step 4
 	 * F(X,Y,Z) = XY v not(X) Z
-     * G(X,Y,Z) = XZ v Y not(Z)
-     * H(X,Y,Z) = X xor Y xor Z
-     * I(X,Y,Z) = Y xor (X v not(Z))
+	 * G(X,Y,Z) = XZ v Y not(Z)
+	 * H(X,Y,Z) = X xor Y xor Z
+	 * I(X,Y,Z) = Y xor (X v not(Z))
 	 */
 	static constexpr uint32_t f(uint32_t x, uint32_t y, uint32_t z)
 	{
@@ -267,10 +267,10 @@ private:
 		uint32_t b;
 		uint32_t c;
 		uint32_t d;
-	} m_context = {s_wordA, s_wordB, s_wordC, s_wordD};
+	} m_context = { s_wordA, s_wordB, s_wordC, s_wordD };
 
 private:
-	/* RFC 1321 - 3.3 Step 3 
+	/* RFC 1321 - 3.3 Step 3
 	 * word A : 01 23 45 67
 	 * word B : 89 ab cd ef
 	 * word C : fe dc ba 98
@@ -337,7 +337,7 @@ std::string getFileSignature(const std::string& filepath)
 	return digested;
 }
 
-int main(int argc, const char *argv[])
+int main(int argc, const char* argv[])
 {
 	using namespace argparse;
 
