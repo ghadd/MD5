@@ -24,6 +24,7 @@
     <ProjectGuid>{b0002c94-af92-4127-b59e-44264a43f4e0}</ProjectGuid>
     <RootNamespace>Lab2MD5</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MD5</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
